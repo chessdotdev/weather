@@ -11,7 +11,7 @@ export default async function handle(req, res){
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${apiKey}&units=metric`);
         if(!response.ok){
             const errorText = await response.text();     
-            console.error(`OpenWeather API error: ${response.status} ${response.statusText} - ${errorText}`);
+            console.error(`OpenWeather API error: ${response.status}`);
             return res.status(response.status).json();       
         }
         const data = await response.json();
