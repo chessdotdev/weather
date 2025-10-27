@@ -13,7 +13,7 @@ export default async function handle(req, res){
             throw new Error('Network response not work');
         }
         const data = await response.json();
-        res.status(200).json(data);
+        res.status(200).json({data: success});
     }catch(error){
         console.error(error);
         res.status(500).json({ error: "Internal server error" });
