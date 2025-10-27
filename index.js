@@ -25,6 +25,7 @@ btn.addEventListener('click', () => {
                     <p class="fs-5 mb-1">🌡️ ${data.main.temp}°C</p>
                     <p class="text-capitalize mb-1">🌤️ ${data.weather[0].description}</p>
                     <p class="mb-1">💧 Humidity: ${data.main.humidity}%</p>
+                    <p class="mb-1">💨 Speed: ${data.wind.speed}%</p>
                     <p class="mb-0">📍 Lat: ${data.coord.lat}, Lon: ${data.coord.lon}</p>
                 </div>
             `;
