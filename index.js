@@ -9,7 +9,7 @@ btn.addEventListener('click', () => {
         return;
     }
 
-    const url = `api/weather?city=${encodeURIComponent(city)}`;
+    const url = `pages/api/weather?city=${encodeURIComponent(city)}`;
 
     fetch(url)
         .then(response => {
