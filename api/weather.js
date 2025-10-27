@@ -12,10 +12,7 @@ export default async function handle(req, res){
         if(!response.ok){
             const errorText = await response.text();     
             console.error(`OpenWeather API error: ${response.status} ${response.statusText} - ${errorText}`);
-            return res.status(response.status).json({ 
-                error: `Weather API error: ${response.status} ${response.statusText}`,
-                details: errorText
-            });       
+            return res.status(response.status).json();       
         }
         const data = await response.json();
         res.status(200).json(data);
