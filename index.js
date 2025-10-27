@@ -30,7 +30,7 @@ btn.addEventListener('click', () => {
             `;
         })
         .catch(error => {
-            console.error("❌ Error fetching weather data:", error);
+            console.error("Error fetching weather data:", error);
             output.textContent = "City not found.";
         });
 });
